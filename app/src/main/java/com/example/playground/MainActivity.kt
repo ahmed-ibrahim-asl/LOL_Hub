@@ -1,6 +1,8 @@
 package com.example.playground
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,10 +32,37 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-//
-//        btnGetMoreMemes.setOnClickListener {
-//            ivMeme.setImageResource(R.drawable.p1)
-//        }
+
+        val imgViewer: ImageView = findViewById(R.id.ivMeme)
+
+        val images = listOf(
+            R.drawable.p1,
+            R.drawable.p2,
+            R.drawable.p3,
+            R.drawable.p4,
+            R.drawable.p5
+        )
+
+        val btnMain: Button = findViewById(R.id.btnGetMoreMemes)
+        var indexCounter:Int = 0
+
+
+
+        btnMain.setOnClickListener{
+
+
+            if(indexCounter != 4){
+                imgViewer.setImageResource(images[indexCounter])
+                indexCounter++
+            }else{
+                indexCounter=0
+                imgViewer.setImageResource(images[indexCounter])
+            }
+
+
+
+
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
