@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PlayGround</string>
+    <string name="appBarText">Make me laugh Tonight</string>
+    <string name="buttonText">More memes</string>
+</resources>

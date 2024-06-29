@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Manfest file helps us set general values for parameters of our entire appliction
+
+        [xmlns] -> extensible markup language name space
+
+        [xmlns:tools="http://schemas.android.com/tools">]   تقريبا ديه زي بضيف ل مكاتب ل الاندرويد مثلا
+        <uses-permission andriod:name="here we can specifiy permissions our app would need" />
+
+        [android:label] -> Name of our application
+
+        [android:icon] ->        if theme in phone is normal icon phone would use this icon
+        [android:roundIcon]  ->  if theme in phone is round icon phone would use this icon
+        [android:supportsRtl]->  make app ready to support arabic
+
+        [<intent-filter>]    ->  Here we tell our app what is firstactivity that going to be launch at the beginning
+
+
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PlayGround"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
